@@ -1,0 +1,159 @@
+/* intuitivnější box-sizing pro všechny prvky na stránce */
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+body {
+  margin:60px 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background-color: #FAFAFA;
+}
+
+.pruh {
+  font-size: 16px;
+  color: #8B8B8B;
+}
+.uvodka {
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.uvodka img {
+  width: 100%;
+  min-width: 150px;
+  max-width: 300px;
+}
+ h1 {
+  font-size: 28px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+h1::after {
+  content:"" ;
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: #407BFF;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 0px;
+  color: black;
+}
+
+
+.text {
+  margin: 60px 0 30px 0;
+}
+
+
+.btn{
+  display: block;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+}
+
+.btn1 {
+  background-color: #407BFF;
+  width: 195px;
+}
+
+.btn2 {
+  background-color: #8B8B8B;
+  width: 220px;
+}
+
+ul{
+  padding: 0;
+  margin: 0;
+}
+  
+.karticka{display: block;
+  list-style: none;
+  background-color: white;
+  max-width: 100%;
+  box-shadow: 0px 4px 6px #407BFF1F;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.karticka img {
+  width: 40px;
+  height: 50px;
+  margin: 20px 30px 20px 20px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.karticka span {
+  font-size: 13px;
+}
+
+@media screen and (min-width:640px){
+
+  .uvodka {
+    width: 50%;
+  }
+
+  h1{
+    margin-top: 30px;
+  }
+
+  .text{
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .butny {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sluzby {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .karticka {
+    flex-basis: calc((100% - 40px)/3);
+    flex-direction: column;
+  }
+  .karticka img {
+    margin: 40px auto 0px auto;
+  }
+
+  .karticka span {
+    margin: 20px 15px;
+  }
+  
+}
